@@ -1,71 +1,138 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19957649&assignment_repo_type=AssignmentRepo)
-# React.js and Tailwind CSS Assignment
+# React.js & Tailwind CSS Assignment
 
-This assignment focuses on building a responsive React application using JSX and Tailwind CSS, implementing component architecture, state management, hooks, and API integration.
+This repository implements a responsive React application using Vite and Tailwind CSS, showcasing component architecture, state management, hooks, and external API integration.
 
-## Assignment Overview
-
-You will:
-1. Set up a React project with Vite and Tailwind CSS
-2. Create reusable UI components
-3. Implement state management using React hooks
-4. Integrate with external APIs
-5. Style your application using Tailwind CSS
-
-## Getting Started
-
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Install dependencies:
-   ```
-   npm install
-   ```
-4. Start the development server:
-   ```
-   npm run dev
-   ```
-
-## Files Included
-
-- `Week3-Assignment.md`: Detailed assignment instructions
-- Starter files for your React application:
-  - Basic project structure
-  - Pre-configured Tailwind CSS
-  - Sample component templates
-
-## Requirements
-
-- Node.js (v18 or higher)
-- npm or yarn
-- Modern web browser
-- Code editor (VS Code recommended)
+---
 
 ## Project Structure
 
 ```
 src/
+├── api/              # Functions for API calls
+│   └── fetchData.js
 ├── components/       # Reusable UI components
-├── pages/           # Page components
-├── hooks/           # Custom React hooks
-├── context/         # React context providers
-├── api/             # API integration functions
-├── utils/           # Utility functions
-└── App.jsx          # Main application component
+│   ├── Button.jsx
+│   ├── Card.jsx
+│   └── Navbar.jsx
+├── context/          # React Context providers
+│   └── AppContext.jsx
+├── hooks/            # Custom React hooks
+│   └── useFetch.js
+├── pages/            # Page-level components
+│   ├── Home.jsx
+│   └── Details.jsx
+├── utils/            # Utility functions
+│   └── formatDate.js
+├── App.jsx           # Main application component
+├── main.jsx          # Entry point
+└── index.css         # Tailwind imports & custom styles
 ```
+
+---
+
+## README.md
+
+````markdown
+# React.js & Tailwind CSS Assignment
+
+## Prerequisites
+- Node.js v18+
+- npm or yarn
+- Modern browser
+
+## Setup
+
+1. **Clone Repo**
+   ```bash
+   git clone <your-repo-url>
+   cd <repo-folder>
+````
+
+2. **Install Dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Start Development Server**
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for Production**
+
+   ```bash
+   npm run build
+   ```
+
+## Features
+
+* **Component Architecture**: Reusable `Navbar`, `Button`, `Card`, etc.
+* **State Management**: React `useState` and Context API
+* **Hooks**: Custom `useFetch` for API calls
+* **API Integration**: Fetch data from \[Your API]
+* **Styling**: Tailwind CSS for responsive layouts
+
+## Usage
+
+* Navigate to `/` for Home page showing list of items.
+* Click on an item to go to `/details/:id` for detailed view.
+* Use the search bar to filter items by keyword.
+* Pagination controls at bottom to navigate pages.
+
+## Environment Variables
+
+Copy `.env.example` to `.env` and set:
+
+```ini
+VITE_API_URL=https://api.example.com/items
+```
+
+## Deployment
+
+Deployed URL: [https://your-deployment-url.com](https://your-deployment-url.com)
 
 ## Submission
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+* Push all code to GitHub Classroom repo
+* Ensure `README.md` contains setup, usage, and deployment URL
+* Include screenshots of Home and Details pages in `README.md`
+* Deployed on Vercel, Netlify, or GitHub Pages
 
-1. Complete all required components and features
-2. Implement proper state management with hooks
-3. Integrate with at least one external API
-4. Style your application with Tailwind CSS
-5. Deploy your application and add the URL to your README.md
+````
 
-## Resources
+---
 
-- [React Documentation](https://react.dev/)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- [Vite Documentation](https://vitejs.dev/guide/)
-- [React Router Documentation](https://reactrouter.com/) 
+## Tailwind & Vite Configuration
+
+1. **Initialize Vite + React**
+   ```bash
+   npm create vite@latest . -- --template react
+````
+
+2. **Install Tailwind**
+
+   ```bash
+   npm install -D tailwindcss postcss autoprefixer
+   npx tailwindcss init -p
+   ```
+
+3. **Configure `tailwind.config.cjs`**
+
+   ```js
+   module.exports = {
+     content: ['./index.html', './src/**/*.{js,jsx}'],
+     theme: { extend: {} },
+     plugins: [],
+   }
+   ```
+
+4. **Include Tailwind in `index.css`**
+
+   ```css
+   @tailwind base;
+   @tailwind components;
+   @tailwind utilities;
+   ```
