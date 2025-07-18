@@ -44,7 +44,7 @@ src/
    ```bash
    git clone <your-repo-url>
    cd <repo-folder>
-````
+   ```
 
 2. **Install Dependencies**
 
@@ -98,7 +98,7 @@ Deployed URL: [https://your-deployment-url.com](https://your-deployment-url.com)
 * Include screenshots of Home and Details pages in `README.md`
 * Deployed on Vercel, Netlify, or GitHub Pages
 
-````
+
 
 ---
 
@@ -107,7 +107,7 @@ Deployed URL: [https://your-deployment-url.com](https://your-deployment-url.com)
 1. **Initialize Vite + React**
    ```bash
    npm create vite@latest . -- --template react
-````
+   ```
 
 2. **Install Tailwind**
 
