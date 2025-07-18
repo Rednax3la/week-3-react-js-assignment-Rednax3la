@@ -31,9 +31,6 @@ src/
 
 ---
 
-## README.md
-
-````markdown
 # React.js & Tailwind CSS Assignment
 
 ## Prerequisites
